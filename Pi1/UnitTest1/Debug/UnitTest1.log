@@ -1,0 +1,2 @@
+﻿  BigDecimal.cpp
+c:\users\bellyoshi\source\repos\bellyoshi\pi\pi1\pi1\bigdecimal.cpp(26): fatal error C1010: プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。'#include "stdafx.h"' をソースに追加しましたか?
