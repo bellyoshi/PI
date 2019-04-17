@@ -162,6 +162,11 @@
     </ClCompile>
     <ClCompile Include="Pi1.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PiDll\PiDll.vcxproj">
+      <Project>{c52e7036-0edf-4167-b0cf-60de4760a606}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

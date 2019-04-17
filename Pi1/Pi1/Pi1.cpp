@@ -4,10 +4,29 @@
 #include "pch.h"
 #include <iostream>
 #include <cmath>
+#include "../PiDll/BigDecimal.h"
 
 int main()
 {
-    std::cout << 16.0 * atan(1.0/5) - 4.0 * atan(1.0/239); 
+	BigDecimal a = 16;
+	BigDecimal b = 4;
+	a = a / 5;
+	b = b / 239;
+	BigDecimal pi = a - b;
+	for (int d = 1; d < 100; d += 2) {
+		a = a / 5;
+		a = a / 5;
+		b = b / 239;
+		b = b / 239;
+		pi = pi - (a / (d * 2+ 1) - b / (d * 2 + 1));
+		a = a / 5;
+		a = a / 5;
+		b = b / 239;
+		b = b / 239;
+		pi = pi + (a / ((d+1) *2 +1) - b / ((d+1)*2 + 1));
+		
+	}
+	std::cout << pi.ToString() << std::endl;
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
